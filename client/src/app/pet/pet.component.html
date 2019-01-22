@@ -1,0 +1,20 @@
+<a href="/">Home</a>
+<div *ngIf="pet">
+  <p>Details about {{pet.name}}</p>
+  <table>
+    <thead>
+      <th>Pet Type:</th>
+      <th>Description:</th>
+      <th>Skills:</th>
+      <th>Likes:</th>
+    </thead>
+    <tr>
+      <td>{{pet.type}}</td>
+      <td>{{pet.description}}</td>
+      <td>{{pet.skill1}} {{pet.skill2}} {{pet.skill3}}</td>
+      <td>{{pet.likes}}</td>
+      <button (click)="castLike(+1, pet._id)">Like this Pet</button> 
+      <button (click)="deletePet(pet._id)">Adopt this Pet</button>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,22 @@
+<a href="/">Home</a>
+<p>{{pet|json}}</p>
+<p>Add a new Pet!</p>
+<p>Name:</p>
+<p *ngIf="error.length > 0">{{error}}</p>
+<input type="text" [(ngModel)]="pet.name" name="pet.name">
+<p>Type:</p>
+<p *ngIf="error.length > 0">{{error}}</p>
+<input type="text" [(ngModel)]="pet.type" name="pet.type">
+<p>Description:</p>
+<p *ngIf="error.length > 0">{{error}}</p>
+<input type="text" [(ngModel)]="pet.description" name="pet.description">
+<p>Skills:</p>
+	<p>Skill 1:</p>
+		<input type="text" [(ngModel)]="pet.skill1" name="pet.skill1">
+	<p>Skill 2:</p>
+		<input type="text" [(ngModel)]="pet.skill2" name="pet.skill2">
+	<p>Skill 3:</p>
+		<input type="text" [(ngModel)]="pet.skill3" name="pet.skill3">
+<br>
+<br>
+<a href="/"><button>Cancel</button></a> <button (click)="createPet()">Add Pet</button>

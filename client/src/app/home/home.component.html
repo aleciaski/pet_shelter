@@ -1,0 +1,15 @@
+<h1>Pet Shelter</h1>
+<h3>These pets are looking for a home!</h3>
+<a href="/pets/new">Add a pet to the shelter </a>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Actions</th>
+  </thead>
+  <tr *ngFor="let pet of allPets">
+    <td>{{pet.name}}</td>
+    <td>{{pet.type}}</td>
+    <td><a href="/pets/{{pet._id}}"><button>Details</button></a> <a href="/pets/{{pet._id}}/edit"><button>Edit</button></a></td>
+  </tr>
+</table>

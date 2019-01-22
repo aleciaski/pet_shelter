@@ -1,0 +1,21 @@
+<div *ngIf="pet">
+  <p>Edit {{pet.name}}</p>
+  <p>Name:</p>
+
+<input type="text" [(ngModel)]="pet.name" name="pet.name">
+<p>Type:</p>
+
+<input type="text" [(ngModel)]="pet.type" name="pet.type">
+<p>Description:</p>
+
+<input type="text" [(ngModel)]="pet.description" name="pet.description">
+<p>Skills:</p>
+	<p>Skill 1:</p>
+		<input type="text" [(ngModel)]="pet.skill1" name="pet.skill1">
+	<p>Skill 2:</p>
+		<input type="text" [(ngModel)]="pet.skill2" name="pet.skill2">
+	<p>Skill 3:</p>
+		<input type="text" [(ngModel)]="pet.skill3" name="pet.skill3">
+
+  <a href="/"><button>Cancel</button></a> <button (click)="updatePet()">Update</button>
+</div>
